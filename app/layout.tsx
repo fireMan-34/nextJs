@@ -14,10 +14,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // only use server
+  console.log(`Route mode: ${process.env.ROUTE_MODE}`);
   return (
     <html lang="en">
-      <h2>Next</h2>
-      <p>Route mode: {process.env.ROUTE_MODE}</p>
       <body className={inter.className}>
         {children}
       </body>
