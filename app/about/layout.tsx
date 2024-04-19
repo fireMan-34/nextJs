@@ -8,7 +8,7 @@ export default function ({ children }: { children: React.ReactNode }) {
     <div>
       <h2>About Layout</h2>
       <div className="inline-flex gap-2">
-        <Link href={"/about"}>
+          <Link href={"/about"}>
           <span className="hover:text-yellow-500">主页</span>
         </Link>
         <Link href={"/about/detail"}>

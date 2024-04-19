@@ -11,8 +11,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  slotA,
 }: Readonly<{
   children: React.ReactNode;
+  slotA: React.ReactNode;
 }>) {
   // only use server
   console.log(`Route mode: ${process.env.ROUTE_MODE}`);
@@ -20,7 +22,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <h2>Route Layout</h2>
+        <h3>Slot</h3>
+        {slotA}
         {children}
+        <div className="pb-9"></div>
       </body>
     </html>
   );
