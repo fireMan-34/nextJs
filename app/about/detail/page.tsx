@@ -1,5 +1,11 @@
-import UseCom from './useCom';
+import { Metadata } from 'next';
 import { sleep } from '@/utils/mock';
+import UseCom from './useCom';
+
+// 元数据避免流式传输重叠
+export const metadata: Metadata = {
+  title: '什么叫做语言',
+};
 
 /**
  * @link [use client](https://nextjs.org/docs/app/building-your-application/rendering/client-components)
