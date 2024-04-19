@@ -17,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <h2>Next</h2>
+      <p>Route mode: {process.env.ROUTE_MODE}</p>
       <body className={inter.className}>
         {children}
       </body>
