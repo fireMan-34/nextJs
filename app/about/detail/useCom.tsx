@@ -1,4 +1,6 @@
 "use client";
+// 客户端只要声明，当前以及其子模块都会单独打包成一个 bundle 二进制页面
+
 import { useEffect, useState } from "react";
 import GetFileInfo from '@/actions/getFileInfo';
 import UseComChild from "./useComChild";
