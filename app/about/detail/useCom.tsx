@@ -1,9 +1,15 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import GetFileInfo from '@/actions/getFileInfo';
 import UseComChild from "./useComChild";
 
 export default function useCom() {
   const [c, setC] = useState(0);
+  
+  useEffect(() => {
+    GetFileInfo().then(console.log);
+  }, []);
+
   return (
     <div>
       <dl>
