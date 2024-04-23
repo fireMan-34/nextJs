@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import BottomMenu from '@/components/BottomMenu';
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -11,11 +12,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  bottomMenu,
   userMenu,
 }: Readonly<{
   children: React.ReactNode;
-  bottomMenu: React.ReactNode;
   userMenu: React.ReactNode;
 }>) {
   // only use server
@@ -27,7 +26,7 @@ export default function RootLayout({
         <h3>Slot</h3>
         {userMenu}
         {children}
-        {bottomMenu}
+        <BottomMenu />
       </body>
     </html>
   );
