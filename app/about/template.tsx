@@ -1,16 +1,21 @@
 let AboutTemplateCount = 0;
 
-// template 定义的时候 layout 默默是 template
-function AboutTemplate({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+// 每一次页面 hard route 的时候会更新，一般用于用户级别更新
+async function AboutTemplate({ children }: { children: React.ReactNode }) {
 
-  return <div>
-    <h2 className="text-green-500">Tempalte {AboutTemplateCount++}</h2>
-    {children}
-  </div>
-};
+  await new Promise((resolve) => {
+    setTimeout(() => {
+      AboutTemplateCount++;
+      resolve(null);
+    });
+  });
+
+  return (
+    <div className="mx-auto w-screen max-w-screen-xl">
+      <h2 className="text-center font-extrabold text-5xl">Tempalte Load Count {AboutTemplateCount}</h2>
+      {children}
+    </div>
+  );
+}
 
 export default AboutTemplate;
