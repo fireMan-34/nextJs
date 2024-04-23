@@ -7,7 +7,7 @@ function AboutTemplate({ children }: { children: React.ReactNode }) {
   const { count, isCountFinish } = useFirstCountCount(3);
 
   return (
-    <div className="mx-auto w-screen max-w-screen-xl">
+    <div className="mx-auto max-w-screen-xl">
       <h2 className="flex justify-center items-center gap-8 font-extrabold text-5xl">
         Tempalte Load: {count}
         <MiniLoading hidden={isCountFinish} />
