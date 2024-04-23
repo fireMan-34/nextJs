@@ -2,12 +2,11 @@ import Link from "next/link";
 
 let renderCount = 0;
 /** 模板只会调用一次相对于调用者 */
-export default function ({ children, slotA }: { children: React.ReactNode, slotA: React.ReactNode }) {
+export default function ({ children, ...props }: { children: React.ReactNode, [props: string]: any }) {
   renderCount+=1;
   return (
     <div>
       <h2>About Layout</h2>
-      {slotA}
       <div className="inline-flex gap-2">
           <Link href={"/about"}>
           <span className="hover:text-yellow-500">主页</span>
