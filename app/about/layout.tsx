@@ -6,10 +6,10 @@ import Link from "next/link";
 /** 模板只会调用一次相对于调用者 */
 export default  function ({
   children,
-  ...props
+  simple,
 }: {
   children: React.ReactNode;
-  [props: string]: any;
+  simple: React.ReactNode;
 }) {
   const { count, isCountFinish } = useFirstCountCount(3);
 
@@ -28,6 +28,7 @@ export default  function ({
           <MiniLoading hidden={isCountFinish} />
         </nav>
       </div>
+      {simple}
       {children}
     </div>
   );
