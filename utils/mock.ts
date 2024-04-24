@@ -1,5 +1,6 @@
+type SleepFunction = (time?: number) => Promise<number>;
 
-export function sleep(time: number = 1000) {
+export const sleep: SleepFunction =(time = 1000) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(time);

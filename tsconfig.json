@@ -16,6 +16,8 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "outDir": "./typescript",
+    "tsBuildInfoFile": "./typescript/tsconfig.tsbuildInfo",
     "plugins": [
       {
         "name": "next"
@@ -26,7 +28,6 @@
         "./*"
       ]
     },
-    "outDir": "typescript"
   },
   "include": [
     "next-env.d.ts",
