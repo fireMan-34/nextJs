@@ -20,6 +20,7 @@ const nextConfig = {
       // 不完全修复 IE 11 以上任存在不可识别转译问题，未测试是否存运行
       // config.target = [ 'web', 'es5', 'browserslist' ];
     }
+    // config.devtool = "source-map";
     return config;
   }
 };
