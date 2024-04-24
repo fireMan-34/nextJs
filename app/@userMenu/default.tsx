@@ -4,7 +4,7 @@
  * @export
  * @return {*} 
  */
-export default function() {
+export default function DefaultSlot () {
   return <p>
     硬导航会丢失插槽状态，所以会展示 default 插槽对应的 UI 或者使用 默认 404 页面 
   </p>;

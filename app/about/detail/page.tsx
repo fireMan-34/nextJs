@@ -11,7 +11,7 @@ export const metadata: Metadata = {
  * @link [use client](https://nextjs.org/docs/app/building-your-application/rendering/client-components)
  * @returns 
  */
-export default function () {
+export default function Page () {
 
   async function loadSuccess(){
     'use server';

@@ -1,3 +1,6 @@
+import "react-app-polyfill/stable";
+import "react-app-polyfill/ie11";
+import "react-app-polyfill/ie9";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import BottomMenu from "@/components/BottomMenu";
@@ -21,6 +24,9 @@ export default function RootLayout({
   console.log(`Route mode: ${process.env.ROUTE_MODE}`);
   return (
     <html lang="en">
+      <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      </head>
       <body className={`${inter.className} pb-9 shadow-inner shadow-red-300`}>
         <h2 className="font-extrabold text-center text-6xl text-red-700">
           Route Layout

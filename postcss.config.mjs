@@ -2,6 +2,8 @@
 const config = {
   plugins: {
     tailwindcss: {},
+    // https://github.com/postcss/autoprefixer
+    autoprefixer: {},
   },
 };
 

@@ -5,7 +5,10 @@
 		}
 	],
 	"settings": {
-		"typescript.tsdk": "node_modules\\typescript\\lib"
+		"typescript.tsdk": "node_modules\\typescript\\lib",
+		"path-intellisense.mappings": {
+			"./.next": "{workspaceFolder}/.next"
+		}
 	},
 	"extensions": {
 		"recommendations": [

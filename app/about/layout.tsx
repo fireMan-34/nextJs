@@ -1,10 +1,11 @@
 'use client';
+import { Route } from "next";
+import Link from "next/link";
 import MiniLoading from "@/components/Mini-Loading";
 import { useFirstCountCount } from "@/hooks/useFirstCountCount";
-import Link from "next/link";
 
 /** 模板只会调用一次相对于调用者 */
-export default  function ({
+export default  function Layout ({
   children,
   simple,
 }: {
@@ -21,7 +22,7 @@ export default  function ({
           <Link href={"/about"} className="hover:text-yellow-500">
             主页
           </Link>
-          <Link href={"/about/detail"} className="hover:text-yellow-500">
+          <Link href={"/about/detail" as Route} className="hover:text-yellow-500">
             详情
           </Link>
           <span>Layout run Count:{count}</span>

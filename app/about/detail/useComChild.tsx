@@ -1,5 +1,5 @@
 import Link from 'next/link';
-export default function () {
+export default function UseComChild () {
   return (
     <dl>
       <dt>使用客户端组件有什么用</dt>

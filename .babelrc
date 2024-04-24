@@ -1,0 +1,18 @@
+{
+  "presets": [
+    [
+      "next/babel",
+      {
+        "preset-env": {},
+        "transform-runtime": {},
+        "styled-jsx": {},
+        "class-properties": {},
+        "target": {
+          "ie": 9,
+          "es5": true
+        }
+      }
+    ]
+  ],
+  "plugins": []
+}

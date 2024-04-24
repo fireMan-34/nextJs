@@ -1,23 +1,26 @@
+import { Route } from "next";
 import Link from "next/link";
 
 interface NavItem {
   text: string;
-  href: string;
+  href: Route;
 }
 
 const navs: NavItem[] = [
   { text: "首頁", href: "/" },
   { text: "关于", href: "/about" },
-  { text: "道具", href: "/items" },
+  { text: "道具", href: "/" },
   { text: "用戶", href: "/user" },
-  { text: "任務", href: "/task" },
-  { text: "mod", href: "/mod" },
+  { text: "任務", href: "/task" as Route },
+  { text: "mod", href: "/mod" as Route },
 ];
 
 export default function bottomMenu({}: {}) {
   return (
     <>
-      <div className="fixed bottom-24 right-8 bg-stone-500 shadow-indigo-50 shadow-md text-center align-middle text-red-300">
+      <div
+        className="fixed bottom-24 right-8 bg-stone-500 shadow-indigo-50 shadow-md text-center align-middle text-red-300"
+      >
         +
       </div>
 
